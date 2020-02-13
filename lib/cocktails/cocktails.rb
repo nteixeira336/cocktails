@@ -1,0 +1,4 @@
+class Cocktails::Cocktails
+
+
+end 
