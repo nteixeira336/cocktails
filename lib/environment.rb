@@ -1,4 +1,4 @@
-require "./cocktails/version"
+require_relative "./cocktails/version"
 require 'pry'
 require 'httparty'
 require_relative './cocktails/cocktails'
