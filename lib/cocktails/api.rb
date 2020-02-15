@@ -1,4 +1,5 @@
 class Cocktails::API
 
 
-end 
+
+end
