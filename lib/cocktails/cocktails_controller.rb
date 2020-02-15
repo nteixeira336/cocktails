@@ -8,8 +8,10 @@ class Cocktails::CocktailsController
     get_user_cocktail
   end
 
-  def get_cocktails
-    @cocktails= []
+  def get_user_cocktail
+    puts "Please choose a cocktail to see it's ingredients."
+    input= gets.chomp
+    API.new.get_user_cocktail(input)
   end
 
 
