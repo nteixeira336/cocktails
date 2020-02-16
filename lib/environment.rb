@@ -1,6 +1,6 @@
 require_relative "./cocktails/version"
 require 'pry'
-require 'httparty'
+require 'nokogiri'
 require_relative './cocktails/cocktails'
 require_relative './cocktails/cocktails_controller'
 require_relative './cocktails/api'

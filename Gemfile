@@ -5,4 +5,4 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in cocktails.gemspec
 #gemspec
 gem 'pry'
-gem "httparty"
+gem "nokogiri"
