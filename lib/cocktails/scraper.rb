@@ -10,12 +10,10 @@ class Cocktails::Scraper
         :title => cocktail.css("h3.fixed-recipe-card_h3 a span").text,
         :description => cocktail.css("div.fixed-recipe-card_description ng-isolate-scope")
       }
-binding.pry
+      cocktails << cocktail_hash 
     end
-
-
-
-  end
+    cocktails
+end
 
 
 end
