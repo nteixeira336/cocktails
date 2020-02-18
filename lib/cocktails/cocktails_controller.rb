@@ -36,6 +36,15 @@ class Cocktails::CocktailsController
     end
   end
 
+  def exit_app
+    puts "Goodbye!"
+    exit
+  end
+
+  def enter_correct_input
+    puts "Please enter a valid input of a number."
+  end 
+
 
 
 
