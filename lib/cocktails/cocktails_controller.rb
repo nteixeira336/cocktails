@@ -14,6 +14,11 @@ class Cocktails::CocktailsController
     puts "Welcome to the cocktails app!"
   end
 
+  def display_cocktails
+    Cocktail.all.each.with_index(1){|cocktail,index|
+    puts "#{index}. #{cocktail.name}"}
+  end 
+
 
 
 

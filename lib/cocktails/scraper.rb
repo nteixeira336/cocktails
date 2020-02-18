@@ -7,10 +7,10 @@ class Cocktails::Scraper
     cocktails=[]
     cocktail_info.each do |cocktail|
       cocktail_hash= {
-        :title => cocktail.css("h3.fixed-recipe-card_h3 a span").text,
+        :name => cocktail.css("h3.fixed-recipe-card_h3 a span").text,
         :description => cocktail.css("div.fixed-recipe-card_description ng-isolate-scope")
       }
-      cocktails << cocktail_hash 
+      cocktails << cocktail_hash
     end
     cocktails
 end
