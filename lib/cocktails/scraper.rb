@@ -6,14 +6,13 @@ class Cocktails::Scraper
     cocktail_info= page.css("article.fixed-recipe-card")
     cocktails=[]
     cocktail_info.each do |cocktail|
-      cocktail_hash= {
+      cocktail_info= {
         :name => cocktail.css("h3.fixed-recipe-card_h3 a span").text,
-        :description => cocktail.css("div.fixed-recipe-card_description ng-isolate-scope")
-      }
-      cocktails << cocktail_hash
+        :description => cocktail.css("div.fixed-recipe-card_description ng-isolate-scope")}
+
+      cocktails << cocktail_name
     end
     cocktails
-end
-
+  end
 
 end
