@@ -12,7 +12,7 @@ class Cocktails::CocktailsController
   end
 
   def greeting
-    puts "Welcome to the cocktails app!"
+    puts "Welcome to the cocktails app! Please choose a cocktail from the menu below to see it's ingredients."
   end
 
   def display_cocktails
@@ -43,7 +43,7 @@ class Cocktails::CocktailsController
 
   def enter_correct_input
     puts "Please enter a valid input of a number."
-  end 
+  end
 
 
 
