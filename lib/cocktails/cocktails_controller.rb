@@ -3,37 +3,31 @@ class Cocktails::CocktailsController
   def run
     make_cocktails
     greeting
+    display_cocktails
     user_input
   end
 
+  #Scrapping all of various cocktails
   def make_cocktails
-    cocktails_array = Cocktails::Scraper.scrape_page
-    Cocktails.create_from_collection(cocktails_array)
+    @cocktails_array = Cocktails::Scraper.scrape_page
+    puts @cocktails_array
   end
 
   def greeting
-    puts "Welcome to the cocktails app! Please choose a cocktail from the menu below to see it's ingredients."
+    puts "Welcome to the cocktails app! Please choose a cocktail from the menu below to see it's description."
   end
 
   def display_cocktails
-    Cocktail.all.each.with_index(1){|cocktail,index|
-    puts "#{index}. #{cocktail.name}"}
+    Cocktails::Cocktail.all
+
+    #each.with_index(1){|cocktail,index|
+    #puts "#{index}. #{cocktail.name}"}
+
   end
 
   def user_input
-    input= nil
-    while input != "exit"
-      input= gets.chomp
-      if input.downcase == "cocktails"
-        puts "To see the cocktail description, please enter the number."
-        display_cocktails
-        find_cocktail_by_number
-      elsif input.downcase== "exit"
-        exit_app
-      else
-        enter_correct_input
-      end
-    end
+
+
   end
 
   def exit_app

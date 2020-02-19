@@ -15,6 +15,10 @@ attr_accessor :name, :description
     cocktails_array.each do |cocktail|
       self.new(cocktail)
     end
+  end
+
+  def self.all
+    @@all
   end 
 
 end
